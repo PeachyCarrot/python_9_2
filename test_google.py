@@ -14,7 +14,7 @@ def test_google_search1():
     browser.element('[id="search"]').should(have.text('Ведьмак 3: Дикая Охота'))
 
 
-def test_google_notFound():
+def test_google_not_found():
     browser.open('https://google.com')
     browser.element('[name="q"]').should(be.blank).type('gПpfdsgdfsgапFGFHteqw').press_enter()
     browser.element('.card-section').should(have.text('По запросу gПpfdsgdfsgапFGFHteqw ничего не найдено.'))
